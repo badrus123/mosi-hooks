@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hukum Hook</title>
+  <meta title="description" content="">
+  <meta title="author" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:400,700,900italic,900,700italic,400italic">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body ng-app="hookesLaw" ng-controller="MainCtrl as main">
+
+
+
+  <div class="container">
+
+
+    <section class="vh-100 flex flex-center p2 relative">
+      <spring k="main.k" formula-x="main.x"></spring>
+      <code class="absolute md-col-10 lg-col-8 col-12 flex flex-center controls">
+        <!-- Formula -->
+        <div class="flex-auto"></div>
+        <div class="lg-col-2 sm-col-3 center">
+          F ({{ -main.k * main.x / 100 | number: 0 }}) =
+        </div>
+        <div class="col-6 sm-col-4 blue">
+          <label class="black block">-k (stiffness): {{ main.k / 100 }}</label>
+          <input class="range-light col-12"
+            ng-model="main.k"
+            type="range">
+        </div>
+        <div class="col-1 center">*</div>
+        <div class="lg-col-2 sm-col-2 center">x ({{ main.x | number: 0 }})</div>
+        <div class="flex-auto"></div>
+      </code>
+    </section>
+      <center><p>&copy; 2019 Badrus Shoolehk Al Ar Fanny<p></p></center>
+  </div>
+
+  <script src="bundle.js"></script>
+
+</body>
+</html>
